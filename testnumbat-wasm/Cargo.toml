@@ -1,0 +1,28 @@
+[package]
+name = "testnumbat-wasm"
+version = "0.0.1"
+edition = "2018"
+
+authors = ["Test Author", "Test Author"]
+license = "GPL-3.0-only"
+readme = "README.md"
+repository = "https://github.com/Saisumanthv/test_sdk-0.0.1"
+homepage = "https://testnumbat.com/"
+documentation = "https://docs.testnumbat.com/"
+description = "Testnumbat WebAssembly smart contract API"
+keywords = ["testnumbat", "wasm", "webassembly", "blockchain", "contract"]
+categories = ["no-std", "wasm", "cryptography::cryptocurrencies", "development-tools"]
+
+[features]
+legacy-nft-transfer = []
+
+[dependencies]
+wee_alloc = "0.4"
+arrayvec = { version = "0.5.2", default-features = false, features = ["array-sizes-33-128", "array-sizes-129-255"] }
+hashbrown = "0.9.1"
+hex-literal = "0.3.1"
+
+[dependencies.testnumbat-codec]
+version = "0.0.1"
+path = "../testnumbat-codec"
+features = ["derive"]

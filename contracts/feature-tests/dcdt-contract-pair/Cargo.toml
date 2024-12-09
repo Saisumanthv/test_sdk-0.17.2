@@ -1,0 +1,35 @@
+[package]
+name = "dcdt-contract-pair"
+version = "0.0.0"
+authors = ["Test Author"]
+edition = "2018"
+publish = false
+
+[lib]
+path = "src/lib.rs"
+
+[features]
+wasm-output-mode = ["testnumbat-wasm-node"]
+
+[dependencies.first-contract]
+path = "first-contract"
+
+[dependencies.second-contract]
+path = "second-contract"
+
+[dependencies.testnumbat-wasm]
+version = "0.0.1"
+path = "../../../testnumbat-wasm"
+
+[dependencies.testnumbat-wasm-derive]
+version = "0.0.1"
+path = "../../../testnumbat-wasm-derive"
+
+[dependencies.testnumbat-wasm-node]
+version = "0.0.1"
+path = "../../../testnumbat-wasm-node"
+optional = true
+
+[dev-dependencies.testnumbat-wasm-debug]
+version = "0.0.1"
+path = "../../../testnumbat-wasm-debug"

@@ -1,0 +1,21 @@
+[package]
+name = "kitty"
+version = "0.0.0"
+authors = [ "Test Author",]
+edition = "2018"
+publish = false
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies.testnumbat-wasm]
+version = "0.0.1"
+path = "../../../../../testnumbat-wasm"
+
+[dependencies.testnumbat-wasm-derive]
+version = "0.0.1"
+path = "../../../../../testnumbat-wasm-derive"
+
+[dependencies.random]
+version = "0.0.0"
+path = "../random"

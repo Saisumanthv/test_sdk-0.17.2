@@ -1,0 +1,31 @@
+[package]
+name = "testnumbat-wasm-output"
+version = "0.0.1"
+edition = "2018"
+
+authors = ["Test Author", "Test Author"]
+license = "GPL-3.0-only"
+readme = "README.md"
+repository = "https://github.com/Saisumanthv/test_sdk-0.0.1"
+homepage = "https://testnumbat.com/"
+documentation = "https://docs.testnumbat.com/"
+description = "Testnumbat WebAssembly panic handler and allocator declaration for the .wasm output"
+keywords = ["testnumbat", "wasm", "webassembly", "blockchain", "contract"]
+categories = ["no-std", "wasm", "cryptography::cryptocurrencies", "development-tools::ffi"]
+
+[features]
+# crate functionality can be turned off
+# is only turned off when running the framework tests
+wasm-output-mode = [] 
+
+# only provide panic messages if so configured
+# they add a lot of bloat to the final bytecode,
+# so only use them if you really need to learn about a certain panic occuring at some point
+panic-message = [] 
+
+[dependencies]
+wee_alloc = "0.4"
+
+[dependencies.testnumbat-wasm-node]
+version = "0.0.1"
+path = "../testnumbat-wasm-node"

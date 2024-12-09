@@ -1,0 +1,17 @@
+[package]
+name = "erc1155-marketplace-abi"
+version = "0.0.0"
+authors = ["Test Author"]
+edition = "2018"
+publish = false
+
+[dependencies.erc1155-marketplace]
+path = ".."
+
+[dependencies.testnumbat-wasm]
+version = "0.0.1"
+path = "../../../../testnumbat-wasm"
+
+[dependencies.testnumbat-wasm-debug]
+version = "0.0.1"
+path = "../../../../testnumbat-wasm-debug"

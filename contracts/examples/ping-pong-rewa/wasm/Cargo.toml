@@ -1,0 +1,27 @@
+[package]
+name = "ping-pong-rewa-wasm"
+version = "0.0.1"
+authors = [ "Test Author",]
+edition = "2018"
+publish = false
+
+[lib]
+crate-type = [ "cdylib",]
+
+[workspace]
+
+[profile.release]
+codegen-units = 1
+opt-level = "z"
+lto = true
+debug = false
+panic = "abort"
+
+[dependencies.ping-pong-rewa]
+features = [ "wasm-output-mode",]
+path = ".."
+
+[dependencies.testnumbat-wasm-output]
+version = "0.0.1"
+path = "../../../../testnumbat-wasm-output"
+features = [ "wasm-output-mode",]

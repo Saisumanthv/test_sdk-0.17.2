@@ -1,0 +1,27 @@
+[package]
+name = "testnumbat-codec-derive"
+version = "0.0.1"
+edition = "2018"
+
+authors = ["Test Author", "Test Author", "Test Author"]
+license = "GPL-3.0-only"
+readme = "README.md"
+repository = "https://github.com/Saisumanthv/test_sdk-0.0.1"
+homepage = "https://testnumbat.com/"
+documentation = "https://docs.testnumbat.com/"
+description = "Macro implementations of testnumbat-codec #[derive(NestedEncode, NestedDecode, TopEncode, TopDecode)]"
+keywords = ["testnumbat", "wasm", "webassembly", "blockchain", "contract"]
+categories = ["no-std", "wasm", "cryptography::cryptocurrencies", "development-tools"]
+
+[lib]
+name = "testnumbat_codec_derive"
+proc-macro = true
+
+[features]
+default = ["syn/full", "syn/parsing", "syn/extra-traits"]
+
+[dependencies]
+proc-macro2 = "1.0"
+quote = "1.0"
+syn = "1.0"
+hex = "0.4"

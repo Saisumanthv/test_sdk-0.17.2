@@ -1,0 +1,17 @@
+[package]
+name = "lottery-dcdt-abi"
+version = "0.0.0"
+authors = ["Test Author"]
+edition = "2018"
+publish = false
+
+[dependencies.lottery-dcdt]
+path = ".."
+
+[dependencies.testnumbat-wasm]
+version = "0.0.1"
+path = "../../../../testnumbat-wasm"
+
+[dependencies.testnumbat-wasm-debug]
+version = "0.0.1"
+path = "../../../../testnumbat-wasm-debug"

@@ -1,0 +1,34 @@
+[package]
+name = "testnumbat-wasm-module-users"
+version = "0.0.1"
+edition = "2018"
+
+authors = ["Test Author", "Test Author"]
+license = "GPL-3.0-only"
+readme = "README.md"
+repository = "https://github.com/Saisumanthv/test_sdk-0.0.1"
+homepage = "https://testnumbat.com/"
+documentation = "https://docs.testnumbat.com/"
+description = "Testnumbat WebAssembly smart contract module that provides a contract users flag"
+keywords = ["testnumbat", "wasm", "webassembly", "blockchain", "contract"]
+categories = ["no-std", "wasm", "cryptography::cryptocurrencies"]
+
+[features]
+wasm-output-mode = ["testnumbat-wasm-node"]
+
+[dependencies.testnumbat-wasm]
+version = "0.0.1"
+path = "../../../testnumbat-wasm"
+
+[dependencies.testnumbat-wasm-derive]
+version = "0.0.1"
+path = "../../../testnumbat-wasm-derive"
+
+[dependencies.testnumbat-wasm-node]
+version = "0.0.1"
+path = "../../../testnumbat-wasm-node"
+optional = true
+
+[dev-dependencies.testnumbat-wasm-debug]
+version = "0.0.1"
+path = "../../../testnumbat-wasm-debug"

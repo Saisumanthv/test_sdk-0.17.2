@@ -1,0 +1,35 @@
+[package]
+name = "forwarder"
+version = "0.0.0"
+authors = ["Test Author"]
+edition = "2018"
+publish = false
+
+[lib]
+path = "src/lib.rs"
+
+[features]
+wasm-output-mode = [
+    "testnumbat-wasm-node",
+]
+
+[dependencies.vault]
+path = "../vault"
+
+[dependencies.testnumbat-wasm]
+version = "0.0.1"
+path = "../../../../testnumbat-wasm"
+# features = ["legacy-nft-transfer"] # only use on Andes v1.2.*
+
+[dependencies.testnumbat-wasm-derive]
+version = "0.0.1"
+path = "../../../../testnumbat-wasm-derive"
+
+[dependencies.testnumbat-wasm-node]
+version = "0.0.1"
+path = "../../../../testnumbat-wasm-node"
+optional = true
+
+[dev-dependencies.testnumbat-wasm-debug]
+version = "0.0.1"
+path = "../../../../testnumbat-wasm-debug"

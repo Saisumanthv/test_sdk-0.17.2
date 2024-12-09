@@ -1,0 +1,79 @@
+[package]
+name = "use-module"
+version = "0.0.0"
+authors = ["Test Author"]
+edition = "2018"
+publish = false
+
+[lib]
+path = "src/lib.rs"
+
+[features]
+wasm-output-mode = [
+    "testnumbat-wasm-node",
+    "testnumbat-wasm-module-dns-wasm",
+    "testnumbat-wasm-module-features-wasm",
+    "testnumbat-wasm-module-pause-wasm"
+]
+
+default = [
+    "testnumbat-wasm-module-dns-default",
+    "testnumbat-wasm-module-features-default",
+    "testnumbat-wasm-module-pause-default"
+]
+
+[dependencies.testnumbat-wasm-module-dns-wasm]
+package = "testnumbat-wasm-module-dns"
+version = "0.0.1"
+path = "../../modules/testnumbat-wasm-module-dns"
+features = ["wasm-output-mode"]
+optional = true
+
+[dependencies.testnumbat-wasm-module-dns-default]
+package = "testnumbat-wasm-module-dns"
+version = "0.0.1"
+path = "../../modules/testnumbat-wasm-module-dns"
+optional = true
+
+[dependencies.testnumbat-wasm-module-features-wasm]
+package = "testnumbat-wasm-module-features"
+version = "0.0.1"
+path = "../../modules/testnumbat-wasm-module-features"
+features = ["wasm-output-mode"]
+optional = true
+
+[dependencies.testnumbat-wasm-module-features-default]
+package = "testnumbat-wasm-module-features"
+version = "0.0.1"
+path = "../../modules/testnumbat-wasm-module-features"
+optional = true
+
+[dependencies.testnumbat-wasm-module-pause-wasm]
+package = "testnumbat-wasm-module-pause"
+version = "0.0.1"
+path = "../../modules/testnumbat-wasm-module-pause"
+features = ["wasm-output-mode"]
+optional = true
+
+[dependencies.testnumbat-wasm-module-pause-default]
+package = "testnumbat-wasm-module-pause"
+version = "0.0.1"
+path = "../../modules/testnumbat-wasm-module-pause"
+optional = true
+
+[dependencies.testnumbat-wasm]
+version = "0.0.1"
+path = "../../../testnumbat-wasm"
+
+[dependencies.testnumbat-wasm-derive]
+version = "0.0.1"
+path = "../../../testnumbat-wasm-derive"
+
+[dependencies.testnumbat-wasm-node]
+version = "0.0.1"
+path = "../../../testnumbat-wasm-node"
+optional = true
+
+[dev-dependencies.testnumbat-wasm-debug]
+version = "0.0.1"
+path = "../../../testnumbat-wasm-debug"
